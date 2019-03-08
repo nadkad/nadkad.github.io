@@ -1,0 +1,428 @@
+/* variables */
+:root {
+  --intro-teal: rgba(59, 141, 153, 0.4) ;
+  --teal: rgb(116, 147, 164);
+  --intro-purple: rgba(107, 107, 131, 0.5);
+  --purple: rgb(107, 107, 131);
+  --pink: rgb(242, 176, 254);
+  --intro-tan: rgba(242, 230, 217, 0.7);
+  --intro-tan2: rgba(242, 230, 217, 0.2);
+  --intro-blue: rgba(230, 233, 242, 0.6);
+  --btn-tan: rgb(242, 230, 217, 0.8);
+  --sbu-red: rgb(153, 0, 0);
+  --link: rgb(242, 230, 217);
+  --link-hover: rgb(80, 47, 80);
+}
+.column {
+  float:left;
+  width: 50%;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.white {
+  color: white;
+  font-weight: 100;
+}
+/* HTML tags styling */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  margin: 0;
+}
+
+a:link, a:visited {
+  text-decoration: none!important;
+}
+
+.purple {
+  color: var(--purple);
+
+}
+
+.teal {
+  color: var(--teal);
+}
+
+.tan {
+  color: var(--intro-tan);
+  opacity: 0.8;
+}
+
+p {
+  text-align: center;
+}
+
+#headline {
+  text-align: left;
+  font-weight: bold;
+}
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  font-weight: lighter;
+  line-height: 20px;
+}
+h2 {
+  font-weight: lighter;
+}
+h3 {
+  font-size: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+hr {
+  margin-top: -20px;
+  margin: -10px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0));
+}
+
+/* caret animation styling */
+h1 span {
+  border-right: .05em solid black;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* navigation bar styling */
+.navbtn {
+  text-align: right;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+nav {
+  height: auto;
+  text-align: center;
+  vertical-align: middle;
+  position: fixed;
+  width: 100%;
+  font-size: 12px;
+  opacity: 0.8;
+  z-index: 1; /* any pos integer fixes the issue of body div going in front of fixed nav */
+}
+
+.btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  background-color: transparent;
+  border: 1px solid var(--intro-tan);
+  color: var(--intro-tan);
+  border-radius: 30px;
+  padding: 15px 25px;
+}
+
+.btn:hover {
+  background-color: var(--intro-tan);
+  color: var(--purple);
+  transition-duration: 0.3s;
+}
+nav ul {
+  line-height: 25px;
+  max-width: 100%;
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  vertical-align: middle;
+  margin:0 auto;
+  padding: 0;
+  text-transform: lowercase;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+nav li {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    padding: 10px;
+}
+
+nav a {
+  color: var(--link);
+  opacity: 0.6;
+}
+
+nav a:hover {
+  opacity: 1.0;
+  transition-duration: .5s;
+}
+
+.external-links ul, .external-links li {
+  color: black;
+  display: inline-block;
+  vertical-align: baseline;
+  line-height: 20px;
+  padding-left: 20px;
+}
+
+.external-links a, .external-links a:visited {
+  text-decoration: none !important;
+  color: black;
+  opacity: 0.6;
+  transition-duration: 0.2s;
+}
+
+.external-links a:hover {
+  opacity: 1.0;
+  transition-duration: 0.5s;
+}
+
+/* Intro styling */
+#headline {
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 26px;
+  color: black;
+  padding-left: 100px;
+  padding-top: 10px;
+}
+
+.learnmore {
+  border-radius: 30px;
+  padding: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  color: var(--btn-tan);
+  background: 0;
+  border: 1px solid var(--btn-tan);
+}
+
+.learnmore:hover{
+  color: white;
+  background: var(--btn-tan);
+  transition-duration: 0.5s;
+}
+
+#intro {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--intro-purple), var(--intro-teal), var(--intro-blue)), url("connection.jpg") center fixed;
+  background-size: cover;
+}
+
+#about, #skills, #projects, #faves {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+#about {
+  background-color: #f2f2f2;
+  min-height: 50vh;
+  height: auto;
+  text-align: center;
+}
+
+#contact {
+  position: relative;
+  top: 50%;
+}
+
+#footer {
+  color: black;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, var(--intro-teal), var(--intro-teal)), url("connection.jpg") center fixed;
+  background-size: cover;
+  justify-content: center;
+}
+
+table {
+  border-bottom: 0px solid;
+  border-top: : 0px solid;
+}
+
+th {
+  min-width: 200px;
+}
+
+tr {
+ border-collapse: collapse;
+ vertical-align: middle;
+ min-height: 60px;
+ height: 60px;
+}
+
+table ul {
+  list-style: none;
+  text-align: left;
+}
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-30%, -50%);
+  min-width: 60%;
+  min-height: auto;
+  width: 60%;
+  /** background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px grey; **/
+}
+
+.header-container {
+  float: left;
+  max-width: 30%;
+}
+
+
+.header {
+  position: absolute;
+  max-width: 30%;
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.content {
+  float: right;
+  max-width: 70%;
+  text-align: center;
+}
+
+.intro-main {
+  position: relative;
+  margin:0 auto;
+  top:50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  transform: translateY(-50%);
+  width: 55%;
+}
+
+.intro-container {
+  position: relative;
+}
+
+#descr {
+  font-size: 20px;
+  font-weight: bold;
+}
+.intro-description {
+  position: relative;
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 70%;
+}
+
+/* Intro img styling */
+#about .me {
+  left: 15%;
+
+}
+
+.me {
+  top: 50%;
+  left: 50%;
+}
+
+.me img {
+  transition-duration: 1.5s;
+  height: 160px;
+  border-radius: 100%;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: saturate(0%);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.me img:hover {
+  transition-duration: 2s;
+  -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter: saturate(100%);
+}
+
+/* Info sections styling */
+.info {
+}
+
+.about-content {
+  max-width: 50%;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+/* Small elements styling */
+.fa-home {
+  padding-right: 10px;
+}
+
+/* SBU styling */
+#sbu {
+  transition-duration: .2s;
+  color: var(--sbu-red);
+  text-shadow: 0px 1px 1px grey;
+}
+#sbu:hover {
+  transition-duration: .2s;
+  text-shadow: 0px 0px 0px grey;
+}
+.heart {
+  font-size: 15px;
+}
+.paw {
+  color: var(--sbu-red);
+}
+
+/* arrow styling & animation */
+#arrow, #arrow:visited {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  color: rgb(242, 230, 217);
+  opacity: 0.8;
+}
+
+#arrow:hover {
+  opacity: 1.0;
+}
+
+@-webkit-keyframes pulse {
+  from { color: rgb(230, 233, 242);  }
+  50% { color: rgb(107, 107, 131) }
+  to { color: rgb(230, 233, 242); }
+}
+
+#arrow {
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+#footer {
+  color: var(--tan);
+  position: relative;
+  bottom: 0;
+}
+
+#footerfont {
+  font-size: 12px;
+  opacity: 0.8;
+  color: white;
+  display: block;
+  bottom: 0;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
