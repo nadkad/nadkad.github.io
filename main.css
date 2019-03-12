@@ -142,7 +142,7 @@ nav a:hover {
 #intro {
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to bottom, var(--gradient-purple), var(--gradient-teal), var(--gradient-silver)), url("connection.jpg") center fixed;
+  background: linear-gradient(to bottom, var(--gradient-purple), var(--gradient-teal), var(--gradient-silver)), url("images/connection.jpg") center fixed;
   background-size: cover;
 }
 
@@ -195,7 +195,7 @@ textarea {
   height: 100vh;
   overflow: auto;
   max-height: auto;
-  background: linear-gradient(to bottom, var(--gradient-teal), var(--gradient-silver)), url("connection.jpg") center fixed;
+  background: linear-gradient(to bottom, var(--gradient-teal), var(--gradient-silver)), url("images/connection.jpg") center fixed;
   background-size: cover;
   justify-content: center;
 }
