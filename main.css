@@ -3,11 +3,20 @@
   --gradient-teal: rgba(59, 141, 153, 0.8) ;
   --gradient-purple: rgba(107, 107, 131, 0.9);
   --gradient-silver: rgba(230, 233, 242, 0.2);
-  --teal: rgb(116, 147, 164);
+  --teal: rgb(59, 141, 153);
   --purple: rgb(107, 107, 131);
   --sbu-red: rgb(153, 0, 0);
-  --link: rgb(242, 230, 217);
-  --link-hover: rgb(80, 47, 80);
+  --link: rgb(255, 255, 255);
+  --link-hover: rgb(140, 122, 184);
+}
+
+.f, .f {
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+
 }
 
 /* HTML tags styling */
@@ -102,13 +111,28 @@ nav li {
 
 nav a {
   color: white;
-  opacity: 0.5;
+  opacity: 0.6;
   transition-duration: 0.2s;
 }
 
-nav a:hover {
+a:hover {
+  color: white;
   opacity: 1.0;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
+}
+
+a {
+  color: white;
+  opacity: 0.9;
+  transition-duration: 0.2s;
+}
+
+a p {
+  opacity: 0;
+  transition: all 0.5s;
+}
+a:hover p {
+  opacity: 1;
 }
 
 .external-links ul, .external-links li {
@@ -177,14 +201,15 @@ textarea {
 }
 
 #sendbtn {
-  background-color: var(--gradient-teal);
-  border: 1px solid var(--gradient-teal);
+  opacity: inherit;
+  background-color: var(--teal);
+  border: 1px solid var(--teal);
 }
 
 #sendbtn:hover {
   background-color: white;
-  color: var(--gradient-teal);
-  border: 1px solid var(--gradient-teal);
+  color: var(--teal);
+  border: 1px solid var(--teal);
   transition-duration: 0.5s;
 }
 #footer {
