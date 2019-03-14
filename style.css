@@ -128,10 +128,11 @@ a {
 }
 
 a p {
-  opacity: 0;
-  transition: all 0.5s;
+  display: none;
+  transition-duration: 1s;
 }
 a:hover p {
+  display: block;
   opacity: 1;
 }
 
@@ -187,13 +188,13 @@ a:hover p {
 }
 
 #contact {
-position: absolute;
-opacity: 0.9;
-width: 60%;
-max-height: 90%;
-top: 60%;
-left: 50%;
-transform: translate(-50%, -60%);
+  position: absolute;
+  opacity: 0.9;
+  width: 60%;
+  max-height: 90%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
 }
 
 textarea {
@@ -238,13 +239,12 @@ textarea {
 
 .skillsbox {
   float: left;
-  background-color: silver;
   border: 1px solid grey;
-  border-radius: 5px;
-  max-width: 250px;
+  width: 200px;
+  height: 400px;
   margin: 10px;
   padding: 5px;
-  text-align: center;
+  padding-top: 20px;
 }
 
 .skillsbox:hover {
@@ -261,21 +261,14 @@ textarea {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-height: auto;
-  width: 80%;
-}
-
-.header-container {
-  position: relative;
-  float: left;
-  width: 20%;
 }
 
 .content {
-  position: relative;
-  float: left;
-  text-align: center;
-  min-width: 80%;
+  background-color: pink;
+}
+
+.header-container {
+
 }
 
 .intro-main {
@@ -291,11 +284,6 @@ textarea {
 }
 
 /* Intro img styling */
-.me {
-  top: 50%;
-  left: 50%;
-}
-
 .me img {
   transition-duration: 1.5s;
   height: 160px;
@@ -319,7 +307,6 @@ textarea {
 .fa-home {
   padding-right: 10px;
 }
-
 .resume {
   background-color: grey;
 }
