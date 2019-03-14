@@ -147,8 +147,9 @@
                         <!--Grid column-->
                         <div class="col-md-6">
                             <div class="md-form mb-0">
-                                <input type="email" name="_replyto" class="form-control">
+                                <input type="email" id="email" name="_replyto" class="form-control">
                                 <label for="email" class="">Your email</label>
+                                <label for="message" class="invalid email"></label>
                             </div>
                         </div>
                         <!--Grid column-->
@@ -171,17 +172,17 @@
                         <!--Grid column-->
                         <div class="col-md-12">
                             <div class="md-form">
-                                <textarea type="text" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
                                 <label for="message">Your message</label>
+                                <label for="message" class="invalid message"></label>
                             </div>
                         </div>
                     </div>
+                    <div class="text-center text-md-left">
+                        <button type="submit" class="btn btn-primary" id="sendbtn" value="Send">Send</a>
+                    </div>
                     <!--Grid row-->
                 </form>
-
-                <div class="text-center text-md-left">
-                    <a class="btn btn-primary" id="sendbtn" value="Send" onclick="document.getElementById('contact-form').submit();">Send</a>
-                </div>
                 <div class="status"></div>
             </div>
             <!--Grid column-->
@@ -232,8 +233,10 @@
 
   </div><!-- end info -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="form.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 
 <script>
   document.addEventListener('DOMContentLoaded',function(event){
