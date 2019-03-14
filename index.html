@@ -1,15 +1,14 @@
 <HTML>
   <head>
-    <title>Nadya Kadayifci | Welcome.</title>
-    <meta name="title" content="Nadya Kadayifci | Welcome.">
-    <meta name="author" content="Nadya Kadayifci">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset='utf-8'>
-    <link rel="stylesheet" type="text/css" href="main.css">
-
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Nadya Kadayifci | Welcome.</title>
+    <meta name="title" content="Nadya Kadayifci | Welcome.">
+    <meta name="author" content="Nadya Kadayifci">
   </head>
 
   <body>
@@ -34,8 +33,6 @@
       <h1 id="headline">~ nadya_kadayifci$ <span id="helloworld">&nbsp;</h1>
       <h2 id="descr">I am a full-stack developer.</h2>
       <ul class="external-links">
-
-      </ul>
     </div> <!-- end intro-main -->
     <a href="#about">
       <i id="arrow" class="fas fa-angle-down fa-2x"></i>
@@ -47,8 +44,6 @@
 <div class="info" id="about">
     <div class="content-container">
       <div class="header-container">
-        <div class="header">
-        </div> <!-- end header -->
       </div> <!-- end header-container -->
       <div class="content">
         <h1>Hi, I'm Nadya.</h1>
@@ -64,17 +59,10 @@
     </a>
 </div> <!-- end about -->
 
-<div id="skills">
+<div class="info" id="skills">
   <div class="content-container">
-    <div class="header-container">
-      <div class="header">
-        <i class="fas fa-toolbox fa-3x purple"></i>
-        <h1>Skills</h1>
-        <hr>
-      </div> <!-- end header -->
-    </div> <!-- end header container -->
     <div class="content">
-      <div class="skillsbox 1">
+      <div class="skillsbox">
         <ul>
           <li><h3><i class="fas fa-paint-brush purple"></i> Front-End</h3></li>
           <li>HTML/CSS</li>
@@ -86,7 +74,7 @@
         </ul>
       </div>
 
-      <div class="skillsbox 2">
+      <div class="skillsbox">
         <ul>
           <li><h3><i class="fas fa-code teal"></i> Back-End</h3></li>
           <li>Java</li>
@@ -100,7 +88,7 @@
         </ul>
       </div>
 
-      <div class="skillsbox 3">
+      <div class="skillsbox">
         <ul>
           <li><h3><i class="fas fa-clipboard-check purple"></i> Tools & Software</h3></li>
           <li>Git version control</li>
@@ -118,25 +106,23 @@
 
     </div> <!-- end content -->
   </div> <!-- end content container -->
+  <a href="#about">
+    <i id="arrow" class="fas fa-angle-down fa-2x"></i>
+  </a>
 </div> <!-- end skills -->
 
 <div id="projects">
   <div class="content-container">
-    <div class="header-container">
-      <div class="header">
-        <i class="fas fa-code fa-3x purple"></i>
-        <h1>Projects</h1>
-        <hr>
-      </div> <!-- end header -->
-    </div> <!-- end headercontainer -->
     <div class="content">
     </div> <!-- end content -->
   </div> <!-- end content container -->
+  <a href="#about">
+    <i id="arrow" class="fas fa-angle-down fa-2x"></i>
+  </a>
 </div> <!-- end projects -->
 
   <div id="footer">
     <div id="contact">
-
       <!--Section: Contact v.2-->
       <section class="mb-4">
         <!--Section heading-->
@@ -146,14 +132,13 @@
         <div class="row">
             <!--Grid column-->
             <div class="col-md-9 mb-md-0 mb-5">
-                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                <form id="contact-form" name="contact-form" action="https://formspree.io/nadya.kadayifci@stonybrook.edu" method="POST">
                     <!--Grid row-->
                     <div class="row">
-
                         <!--Grid column-->
                         <div class="col-md-6">
                             <div class="md-form mb-0">
-                                <input type="text" id="name" name="name" class="form-control">
+                                <input type="text" name="name" class="form-control">
                                 <label for="name" class="">Your name</label>
                             </div>
                         </div>
@@ -162,12 +147,11 @@
                         <!--Grid column-->
                         <div class="col-md-6">
                             <div class="md-form mb-0">
-                                <input type="text" id="email" name="email" class="form-control">
+                                <input type="email" name="_replyto" class="form-control">
                                 <label for="email" class="">Your email</label>
                             </div>
                         </div>
                         <!--Grid column-->
-
                     </div>
                     <!--Grid row-->
 
@@ -175,7 +159,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="md-form mb-0">
-                                <input type="text" id="subject" name="subject" class="form-control">
+                                <input type="text" name="subject" class="form-control">
                                 <label for="subject" class="">Subject</label>
                             </div>
                         </div>
@@ -184,23 +168,19 @@
 
                     <!--Grid row-->
                     <div class="row">
-
                         <!--Grid column-->
                         <div class="col-md-12">
-
                             <div class="md-form">
-                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                <textarea type="text" name="message" rows="2" class="form-control md-textarea"></textarea>
                                 <label for="message">Your message</label>
                             </div>
-
                         </div>
                     </div>
                     <!--Grid row-->
-
                 </form>
 
                 <div class="text-center text-md-left">
-                    <a class="btn btn-primary" id="sendbtn" onclick="document.getElementById('contact-form').submit();">Send</a>
+                    <a class="btn btn-primary" id="sendbtn" value="Send" onclick="document.getElementById('contact-form').submit();">Send</a>
                 </div>
                 <div class="status"></div>
             </div>
@@ -209,57 +189,54 @@
             <!--Grid column-->
             <div class="col-md-3 text-center">
                 <ul class="list-unstyled mb-0">
-                    <li><a target="_blank" href="resume.pdf">
-                      <span class="fa-stack fa-lg">
-                        <i class="far fa-circle fa-stack-2x"></i>
-                        <i class="far fa-file-pdf fa-stack-1x"></i>
-                      </span>
-                      <p>Resume</p>
-                    </a>
-
+                    <li>
+                      <a target="_blank" href="resume.pdf">
+                        <span class="fa-stack fa-lg">
+                          <i class="far fa-circle fa-stack-2x"></i>
+                          <i class="far fa-file-pdf fa-stack-1x"></i>
+                        </span>
+                        <p>Resume</p>
+                      </a>
                     </li>
 
-                    <li><a target="_blank" href="https://github.com/nadkad">
-                      <span class="fa-stack fa-lg">
-                        <i class="far fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-github fa-stack-1x"></i>
-                      </span>
-                      <p>GitHub</p>
-                    </a>
+                    <li>
+                      <a target="_blank" href="https://github.com/nadkad">
+                        <span class="fa-stack fa-lg">
+                          <i class="far fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-github fa-stack-1x"></i>
+                        </span>
+                        <p>GitHub</p>
+                      </a>
                     </li>
 
-                    <li><a target="_blank" href="https://linkedin.com/in/nadkad">
-                      <span class="fa-stack fa-lg">
-                        <i class="far fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-linkedin fa-stack-1x"></i>
-                      </span>
-                      <p>LinkedIn</p>
-                    </a>
+                    <li>
+                      <a target="_blank" href="https://linkedin.com/in/nadkad">
+                        <span class="fa-stack fa-lg">
+                          <i class="far fa-circle fa-stack-2x"></i>
+                          <i class="fab fa-linkedin fa-stack-1x"></i>
+                        </span>
+                        <p>LinkedIn</p>
+                      </a>
                     </li>
                 </ul>
             </div>
             <!--Grid column-->
-
         </div>
-
     </section>
     <!--Section: Contact v.2-->
-</div>
-  <h3 id="footerfont">
-    Made with <i class="fas fa-hand-holding-heart fa-1x"></i> 2018
-    </h3>
-</div> <!-- end footer -->
+  </div>
+    <h3 id="footerfont">
+      Made with <i class="fas fa-hand-holding-heart fa-1x"></i> 2018
+      </h3>
+  </div> <!-- end footer -->
 
   </div><!-- end info -->
-</body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>
-<script src="https://unpkg.com/ionicons@4.2.5/dist/ionicons.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded',function(event){
-
   // array with texts to type in typewriter
   var dataText = ["echo hello, world."]
 
@@ -301,9 +278,8 @@
     }
   }
   // start the text animation
-
   StartTextAnimation(0);
 });
 </script>
-
+</body>
 </HTML>
