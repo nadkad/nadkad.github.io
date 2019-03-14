@@ -10,6 +10,15 @@
   --link-hover: rgb(140, 122, 184);
 }
 
+.invalid {
+  color: red;
+}
+
+.invalid::before {
+  content: "\f2ba";
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
 .f, .f {
   display: inline-block;
   border: 1px solid white;
@@ -128,11 +137,10 @@ a {
 }
 
 a p {
-  display: none;
+  opacity: 0;
   transition-duration: 1s;
 }
 a:hover p {
-  display: block;
   opacity: 1;
 }
 
