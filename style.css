@@ -49,10 +49,12 @@ a:link, a:visited {
 .teal {
   color: var(--teal);
 }
+.description {
 
+}
 #headline {
-  padding-left: 10%;
   text-align: left;
+  padding-left: 10%;
   font-weight: bold;
 }
 
@@ -72,8 +74,6 @@ h2 {
 }
 
 hr {
-  margin-top: -20px;
-  margin: -10px;
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0));
@@ -97,6 +97,7 @@ nav {
   position: fixed;
   width: 100%;
   font-size: 0.75em;
+  background-color: black;
   z-index: 1; /* any pos integer fixes the issue of body div going in front of fixed nav */
 }
 
@@ -176,6 +177,7 @@ a:hover p {
 }
 
 #intro {
+  position: relative;
   height: 100vh;
   width: 100%;
   background: linear-gradient(to bottom, var(--gradient-purple), var(--gradient-teal), var(--gradient-silver)), url("images/connection.jpg") center fixed;
@@ -186,7 +188,6 @@ a:hover p {
   position: relative;
   width: 100vw;
   height: 100vh;
-  border: 1px solid black;
 }
 
 #projects {
@@ -250,9 +251,9 @@ textarea {
 }
 
 .skillsbox {
-  float: left;
-  border: 1px solid grey;
-  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
   height: 400px;
   margin: 10px;
   padding: 5px;
@@ -260,7 +261,7 @@ textarea {
 }
 
 .skillsbox:hover {
-  box-shadow: 0px 5px 5px silver;
+  box-shadow: 0px 5px 5px var(--purple);
   transition-duration: 0.5s;
 }
 .skillsbox ul {
@@ -269,14 +270,17 @@ textarea {
 }
 
 .content-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
 }
 
 .content {
-  background-color: pink;
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header-container {
@@ -284,15 +288,22 @@ textarea {
 }
 
 .intro-main {
-  position: relative;
-  margin:0 auto;
-  top:50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  transform: translateY(-50%);
-  width: 55%;
+  width: 60%;
   text-align: center;
+  vertical-align: middle;
+}
+
+#intro {
+  position: relative;
+  background-color: pink;
+
 }
 
 /* Intro img styling */
@@ -313,6 +324,10 @@ textarea {
 
 /* Info sections styling */
 .info {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  backgrond-color: blue;
 }
 
 /* Small elements styling */
