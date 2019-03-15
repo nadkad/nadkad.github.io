@@ -22,15 +22,6 @@
   font-weight: 900;
 }
 
-.f, .f {
-  display: inline-block;
-  border: 1px solid white;
-  border-radius: 60px;
-  box-shadow: 0px 0px 2px #888;
-  padding: 0.5em 0.6em;
-
-}
-
 /* HTML tags styling */
 body {
   font-family: 'Open Sans', sans-serif;
@@ -142,6 +133,8 @@ a {
 }
 
 a p {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0); /* fixes shaking issue on hover in chrome */
   opacity: 0;
   transition-duration: 1s;
 }
@@ -151,8 +144,7 @@ a:hover p {
 
 .external-links ul, .external-links li {
   color: black;
-  display: inline-block;
-  vertical-align: baseline;
+  vertical-align: top;
   line-height: 20px;
   padding-left: 20px;
 }
@@ -208,6 +200,7 @@ a:hover p {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -60%);
+  vertical-align: top;
 }
 
 textarea {
@@ -298,7 +291,6 @@ textarea {
   flex-direction: column;
   width: 60%;
   text-align: center;
-  vertical-align: middle;
 }
 
 /* Intro img styling */
