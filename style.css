@@ -49,12 +49,15 @@ a:link, a:visited {
 .teal {
   color: var(--teal);
 }
-.description {
-
+.type-writer {
+  background-color: red;
+  width: auto;
+  margin: 0 auto;
+  width: 600px;
+  height: 4em;
 }
 #headline {
   text-align: left;
-  padding-left: 10%;
   font-weight: bold;
 }
 
