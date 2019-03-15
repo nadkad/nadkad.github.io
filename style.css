@@ -50,11 +50,9 @@ a:link, a:visited {
   color: var(--teal);
 }
 .type-writer {
-  background-color: red;
-  width: auto;
-  margin: 0 auto;
-  width: 600px;
   height: 4em;
+  width: 605px;
+  margin: 0 auto;
 }
 #headline {
   text-align: left;
@@ -301,13 +299,6 @@ textarea {
   width: 60%;
   text-align: center;
   vertical-align: middle;
-  background-color: yellow;
-}
-
-#intro {
-  position: relative;
-  background-color: pink;
-
 }
 
 /* Intro img styling */
