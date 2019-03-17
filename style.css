@@ -89,7 +89,6 @@ nav {
   position: fixed;
   width: 100%;
   font-size: 0.75em;
-  background-color: black;
   z-index: 1; /* any pos integer fixes the issue of body div going in front of fixed nav */
 }
 
@@ -231,6 +230,7 @@ textarea {
   background: linear-gradient(to bottom, var(--gradient-teal), var(--gradient-silver)), url("images/connection.jpg") center fixed;
   background-size: cover;
   justify-content: center;
+  overflow: visible;
 }
 
 #footerfont {
@@ -271,7 +271,7 @@ textarea {
 
 .content {
   position: absolute;
-  width: 80%;
+  width: 60%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
