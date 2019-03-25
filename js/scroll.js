@@ -2,7 +2,7 @@
 inView.threshold(0.90);
 var $nav = $('.nav');
 inView('.section').on('enter', function() {
-  $nav.css('background-color', 'black');
+  $nav.css('background-color', 'rgba(0, 0, 0, 0.9)');
 })
 
 inView('#intro').on('enter', function() {
@@ -14,6 +14,14 @@ inView('#footer').on('enter', function() {
   $nav.css('background-color', '');
 })
 
-inView('#footer').on('exit', function() {
-  $nav.css('background-color', 'black');
+inView('#about').on('enter', function() {
+
+})
+
+inView('#skills').on('enter', function() {
+
+})
+
+inView('#projects').on('enter', function() {
+
 })
