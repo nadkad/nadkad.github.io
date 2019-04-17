@@ -60,7 +60,7 @@ nav {
   vertical-align: middle;
   position: fixed;
   width: 100%;
-  font-size: 0.75em;
+  font-size: 0.85em;
   z-index: 1; /* any pos integer fixes the issue of body div going in front of fixed nav */
   transition-duration: 0.5s;
 }
@@ -112,9 +112,10 @@ a {
   text-align: center;
 }
 
+
 .content-container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: relative;
 }
 .content {
@@ -280,7 +281,7 @@ a:hover p {
 }
 
 #signature {
-  font-size: 0.8em;
+  font-size: 0.85em;
   opacity: 0.8;
   color: white;
   position: absolute;
