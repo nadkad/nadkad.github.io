@@ -60,7 +60,7 @@ nav {
   vertical-align: middle;
   position: fixed;
   width: 100%;
-  font-size: 0.85em;
+  font-size: 0.80em;
   z-index: 1; /* any pos integer fixes the issue of body div going in front of fixed nav */
   transition-duration: 0.5s;
 }
