@@ -1,7 +1,6 @@
 // Validates contact form before sending
 $(document).ready(function() {
   $('#sendbtn').click(function (event) {
-    event.preventDefault(); // prevents form from submitting.
     var email = $('#email').val();
     var message = $('#message').val();
 
