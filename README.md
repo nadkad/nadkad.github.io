@@ -1,5 +1,5 @@
 # nadkad.github.io
-Hello and welcome to my personal portfolio website. 
+Hello and welcome to my personal portfolio website! 
 
 You can view it live at https://nadkad.github.io
 
