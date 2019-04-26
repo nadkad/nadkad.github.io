@@ -1,19 +1,24 @@
 :root {
-  --gradient-purple: rgba(107, 107, 131, 0.9);
+  --gradient-purple: rgba(107, 107, 131, 0.8);
   --gradient-teal: rgba(59, 141, 153, 0.8) ;
+  --gradient-silver-o: rgba(230, 233, 242, 0.7);
   --gradient-silver: rgba(230, 233, 242, 0.2);
   --teal: rgb(59, 141, 153);
-  --purple: rgb(107, 107, 150);
-  --sbu-red: rgb(153, 0, 0);
+  --purple-o: rgb(92, 87, 150);
+  --purple: rgba(92, 87, 150, 0.4);
+  --sbu-red-o: rgb(153, 0, 0);
+  --sbu-red: rgba(153, 0, 0, 0.4);
   --error: rgb(255, 77, 77);
+  --syncsort: rgba(75, 139, 255, 0.4);
+  --syncsort-o: rgb(75, 139, 255);
 }
 
 /* HTML tags styling */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
   margin: 0;
   color: black;
-  background: linear-gradient(to bottom, var(--gradient-teal) 40%, var(--gradient-purple) 65%, var(--gradient-teal) 80%, var(--gradient-silver) 100%), url("images/connection.jpg") center fixed;
+  background: linear-gradient(to bottom, var(--gradient-purple) 20%, var(--gradient-silver-o) 50%, var(--gradient-teal) 70%, var(--gradient-silver) 100%), url("images/connection.jpg") center fixed;
   background-size: cover;
 }
 
@@ -22,18 +27,15 @@ a:link, a:visited {
 }
 
 h1 {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1.8em;
+  line-height: 2em;
 }
 h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.3em;
-  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 1.5em;
 }
 h3 {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
-  font-weight: bold;
 }
 .bold {
   font-weight: bolder;
@@ -55,49 +57,66 @@ h1 span {
 
 /* navigation bar styling */
 nav {
-  height: 50px;
-  text-align: center;
-  vertical-align: middle;
+  height: 70px;
   position: fixed;
-  width: 100%;
-  font-size: 0.80em;
+  font-size: 0.85em;
   z-index: 1; /* any pos integer fixes the issue of body div going in front of fixed nav */
   transition-duration: 0.5s;
+  width: 100%;
+  text-shadow: 1px 1px black;
 }
 nav ul {
-  line-height: 25px;
-  max-width: 100%;
-  display: inline-block;
-  position: relative;
+  line-height: 50px;
   list-style: none;
-  vertical-align: middle;
-  margin:0 auto;
-  padding: 0;
-  text-transform: lowercase;
   font-family: 'Roboto Mono', sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+  float: left;
+  width: 100%;
+
+}
+nav #logo {
+  font-size: 3em;
+  letter-spacing: 2px;
 }
 nav li {
     display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    text-align: left;
+    font-weight: bolder;
     padding: 10px;
+    min-width: 120px;
 }
 nav a {
   color: white;
-  opacity: 0.6;
+  opacity: 0.8;
   transition-duration: 0.2s;
+  text-align: center;
+}
+.nav-left {
+  position: relative;
+  float: left;
+  left: 3%;
 }
 
-a:hover {
+.nav-right {
+  position: absolute;
+  right: 3%;
+  float: right;
+}
+
+
+nav a:hover {
+  text-shadow: none;
   color: white;
-  opacity: 1.0;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 a {
-  color: white;
-  opacity: 0.9;
-  transition-duration: 0.2s;
+  color: inherit;
+}
+a:hover {
+  color: inherit;
 }
 
 #intro, #about, #skills, #projects, #footer {
@@ -105,13 +124,8 @@ a {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  text-align: left;
 }
-
-#about {
-  background-color: #f2f2f2;
-  text-align: center;
-}
-
 
 .content-container {
   height: 100%;
@@ -123,28 +137,36 @@ a {
   width: 65%;
   max-height: 90%;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  left: 25%;
+  transform: translate(-25%, -50%);
+  font-weight: medium;
 }
+
+#projects .content {
+  width: 100%;
+}
+
 
 /* Intro styling */
 .type-writer {
   height: 4em;
-  width: 37.8em;
+  width: 100%;
   margin: 0 auto;
 }
 #headline {
   font-family: 'Roboto Mono', sans-serif !important;
+  text-shadow: 1px 1px black;
   text-align: left;
   font-weight: bold;
   line-height: 1.6em;
-  font-size: 1.6em;
-  color: black;
-  padding-top: 10px;
+  font-size: 2em;
+  color: white;
+  opacity: 0.8;
+  padding: 5px;
+  width: 90%;
+  margin: 0 auto;
 }
 #intro {
-  background: linear-gradient(to bottom, var(--gradient-purple), var(--gradient-teal), var(--gradient-silver)), url("images/connection.jpg") center fixed;
   background-size: cover;
 }
 .intro-main {
@@ -155,7 +177,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 60%;
+  width: 100%;
   text-align: center;
 }
 /* Intro img styling */
@@ -174,38 +196,21 @@ a {
 }
 
 /* Skills styling */
-#skills .content {
-  width: 90%;
+
+.skills {
 }
 .skillsbox {
   display: inline-block;
   vertical-align: top;
   width: auto;
-  min-height: 400px;
-  margin: 20px;
+  height: 450px;
   padding: 5px;
   padding-top: 20px;
   font-weight: bolder;
   border-radius: 5px;
 }
-.skillsbox .fas {
-  opacity: 0.7;
-}
-.skillsbox:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  transition-duration: 0.5s;
-}
-.skillsbox:hover .fas {
-  color: var(--purple);
-  opacity: 1.0;
-}
-.skillsbox:hover .fa-code {
-  color: var(--teal);
-}
-.skillsbox ul {
-  list-style: none;
-  padding-left: 0;
-  line-height: 1.7em;
+.skills li {
+  display: inline-block;
 }
 .purple {
   color: var(--purple);
@@ -267,7 +272,17 @@ a:hover p {
 }
 
 .resume {
-  background-color: var(--purple);
+  background: linear-gradient(to right, var(--purple), var(--purple-o));
+  background-size: 300% 40%;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  transition-property: background-position;
+  transition-duration: 0.2s;
+  padding: 0;
+}
+.resume:hover {
+  background-position: 90% 100%;
+
 }
 
 .invalid {
@@ -293,15 +308,43 @@ a:hover p {
 
 /* SBU styling */
 #sbu {
-  transition-duration: .2s;
-  color: var(--sbu-red);
-  text-shadow: 0px 1px 1px grey;
+  background: linear-gradient(to right, var(--sbu-red), var(--sbu-red-o));
+  background-size: 300% 40%;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  transition-property: background-position;
+  transition-duration: 300ms;
+  padding: 0;
 }
 #sbu:hover {
-  transition-duration: .2s;
-  text-shadow: 0px 0px 0px grey;
+  background-position: 50% 100%;
 }
 
+#comodo {
+  background: linear-gradient(to right, var(--sbu-red), var(--sbu-red-o));
+  background-size: 300% 40%;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  transition-property: background-position;
+  transition-duration: 300ms;
+  padding: 0;
+}
+#comodo:hover {
+  background-position: 50% 100%;
+}
+
+#syncsort {
+  background: linear-gradient(to right, var(--syncsort), var(--syncsort-o));
+  background-size: 300% 40%;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  transition-property: background-position;
+  transition-duration: 300ms;
+  padding: 0;
+}
+#syncsort:hover {
+  background-position: 80% 100%;
+}
 /* arrow styling & animation */
 #arrow, #arrow:visited {
   position: absolute;
@@ -314,9 +357,9 @@ a:hover p {
   opacity: 1.0;
 }
 @-webkit-keyframes pulse {
-  from { color: rgb(230, 233, 242);  }
-  50% { color: rgb(107, 107, 131) }
-  to { color: rgb(230, 233, 242); }
+  from { color: white; }
+  50%  { color: rgb(107, 107, 131); }
+  to   { color: white; }
 }
 #arrow {
   -webkit-animation-name: pulse;

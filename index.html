@@ -14,28 +14,30 @@
   </head>
 
   <body>
-    <div>
     <nav class="nav">
+      <div class="nav-left">
         <ul>
-          <li><a href="#intro"><i class="fas fa-home"></i></a></li>
+          <li><a id="logo" href="#intro">NK</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <ul>
           <li><a href="#about"><i class="far fa-smile-beam"></i> About</a></li>
           <li><a href="#skills"><i class="fas fa-toolbox"></i> Skills</a></li>
           <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
           <li><a href="#contact"><i class="far fa-address-book"></i> Contact</a></li>
         </ul>
+      </div>
     </nav>
-  </div> <!-- end nav -->
 
 <!----------INTRO--------->
   <div id="intro">
     <div class="intro-main">
       <div class="me">
-        <img src="images/me.png" alt="me.png"></img>
       </div> <!-- end me -->
       <div class="type-writer">
-        <h1 id="headline">~ nadya_kadayifci$ <span id="helloworld">&nbsp;</h1>
+        <h1 id="headline">~ Nadya_Kadayifci$&nbsp;<span id="helloworld"></h1>
       </div> <!-- end type-writer -->
-      <h2 id="descr">I am a full-stack developer.</h2>
       <ul class="external-links"></ul>
     </div> <!-- end intro-main -->
     <a href="#about">
@@ -50,12 +52,12 @@
       <div class="header-container">
       </div> <!-- end header-container -->
       <div class="content">
-        <h1>Hi, I'm Nadya.</h1>
-        <h2>I am an aspiring <span class="purple">full-stack developer.</span></h2>
-        <p>I recently graduated from <a id="sbu" target="_blank" href="https://www.cs.stonybrook.edu/about-us"/>Stony Brook University(<b class="paws">	&#x1F43E;</b>)</a> with a B.S. in <span class="bold">Computer Science</span> and a specialization in <span class="bold">Human-Computer Interaction.</span></p>
-        <p>I would like to combine my passion for front-end with problem solving. I value knowing and understanding how all layers of code work together in tandem and in bridging the gap between the user and the provider.<p>
-        <p>Some things I'm interested in and hope to learn more within the the field are data science and visualization, machine learning, programming languages, and UI/UX.</p>
-        <p>Scroll down to learn more and see my projects, or view <a class="resume" target="_blank" href="resume.pdf">my resume</a> for a more condensed version.</p>
+        <h1>I. About</h1>
+        <h2>I am an aspiring full-stack developer.</h2>
+        <p>I recently graduated from <a id="sbu" target="_blank" href="https://www.cs.stonybrook.edu/about-us"/>Stony Brook University </a> with a B.S. in <span class="bold">Computer Science</span> and a specialization in <span class="bold">Human-Computer Interaction.</span></p>
+        <p>I enjoy being able to combine my passions for front-end and problem solving in order to make robust projects. I value knowing and understanding how all layers of code work in tandem and in bridging the gap between users' and providers' wants and needs in order to make a positive impact.<p>
+        <p>Some things I'm interested in and hope to continue learning more within the the field are data science/visualization, machine learning, programming languages, and UI/UX.</p>
+        <p>Scroll down to learn more and see my projects, or view <a class="resume" target="_blank" href="resume.pdf">my resume </a> for a more condensed version.</p>
       </div> <!-- end content -->
     </div> <!-- end content-container -->
     <a href="#skills">
@@ -66,10 +68,9 @@
 <div class="section" id="skills">
   <div class="content-container">
     <div class="content">
-        <div class="skillsbox one">
-          <h1>Front-End</h1>
-          <i class="fas fa-paint-brush fa-2x"></i>
-          <hr></hr>
+      <h1>II. Skills</h1>
+      <div class="skills">
+        <h2><i class="fas fa-paint-brush"></i> Front-End</h2>
             <ul>
               <li>HTML/CSS</li>
               <li>JavaScript</li>
@@ -78,12 +79,8 @@
               <li>UI Design</li>
               <li>Some experience with: PHP, Perl</li>
             </ul>
-          </div>
 
-          <div class="skillsbox two">
-          <h1>Back-End</h1>
-          <i class="fas fa-code fa-2x"></i>
-          <hr></hr>
+          <h2><i class="fas fa-code"></i> Back-End</h2>
           <ul>
             <li>Java</li>
             <li>Python</li>
@@ -94,12 +91,8 @@
             <li>MIPS Assembly</li>
             <li>Some experience with: SML, C#</li>
           </ul>
-        </div>
 
-        <div class="skillsbox three">
-          <h1>Tools & Software</h1>
-          <i class="fas fa-clipboard-check fa-2x"></i>
-          <hr></hr>
+          <h2><i class="fas fa-clipboard-check"></i> Tools & Software</h2>
           <ul>
             <li>Git version control</li>
             <li>Command Line/Terminal</li>
@@ -113,7 +106,7 @@
             <li>Unity3D</li>
             <li>Processing</li>
           </ul>
-        </div>
+      </div>
     </div> <!-- end content -->
   </div> <!-- end content container -->
   <a href="#projects">
@@ -123,12 +116,17 @@
 
 <div class="section" id="projects">
   <div class="content-container">
+    <div class="content">
+      <div class="header">
+        <h1>III. Projects</h1>
+      </div>
       <div class="main-carousel">
         <div class="carousel-cell">
           <div class="cell-container">
-            <div class="description">
-              <h1>Automated U.S. Districting</h1>
-              <h2>Fall 2018</h2>
+            <div class="description-container">
+              <div class="description">
+              <h2>Automated U.S. Districting</h2>
+              <h3>Fall 2018</h3>
               <p>As my final senior project, my team and I created an automated U.S. districting site with a goal to reduce gerrymandering based on different user input criteria. We used Google Maps API along with real precinct GeoJSON data in order to simulate and display live districting of particular states.</p>
               <div class="tools">
                 <span><i class="fas fa-circle red"></i> Full-stack</span>
@@ -139,6 +137,7 @@
               <a href="https://github.com/nadkad/election" target="__blank"><button class="btn btn-primary"> <i class="fab fa-github"></i> GitHub</button></a>
               <button class="btn btn-primary">Learn More</button>
             </div>
+          </div>
             <div class="image">
               <img src="images/projects/districting.png"></img>
             </div>
@@ -146,9 +145,10 @@
         </div>
         <div class="carousel-cell">
           <div class="cell-container">
+            <div class="description-container">
             <div class="description">
-              <h1>SafeTravels</h1>
-              <h2>Best UI/UX, HackHealth 2019</h2>
+              <h2>SafeTravels</h2>
+              <h3>Best UI/UX, HackHealth 2019</h3>
               <p>A web app built at a hackathon that allows travelers to see the health risks and vaccine information of different countries. Won best UI/UX at Hack Health 2019.</p>
               <div class="tools">
                 <span><i class="fas fa-circle red"></i> HTML/CSS</span>
@@ -159,6 +159,7 @@
               <a href="https://devpost.com/software/safe-travels-szq0wo" target="__blank"><button class="btn btn-primary"> <i class="fas fa-trophy"></i> Devpost</button></a>
               <button class="btn btn-primary">Learn More</button>
             </div>
+          </div>
             <div class="image">
               <img src="images/projects/safetravels.png"></img>
             </div>
@@ -166,10 +167,12 @@
         </div>
         <div class="carousel-cell">
           <div class="cell-container">
+            <div class="description-container">
+
             <div class="description">
-              <h1>Site Score Scanner</h1>
-              <h2>Summer 2018</h2>
-              <p>As an intern at Comodo Security Solutions, I did a radical redesign of Site Score Scanner, a free website scanner tool which checks for malware, with a goal to increase conversion rates. I created fully functional front-end wireframes for development, gathered design assets, and prepared an in-depth A/B test hypothesis based on MECLABS conversion research and user testing.</p>
+              <h2>Site Score Scanner</h2>
+              <h3>Summer 2018</h3>
+              <p>As an intern at <a id="comodo" href="" target="__blank">Comodo Security Solutions</a>, I did a redesign of Site Score Scanner, a free website malware scanner with a goal to increase conversion rates. I created fully functional front-end wireframes for development and prepared an in-depth A/B test hypothesis based on MECLABS conversion research and user testing.</p>
               <div class="tools">
                 <span><i class="fas fa-circle red"></i> Front-end</span>
                 <span><i class="fas fa-circle blue"></i> Adobe Photoshop</span>
@@ -177,6 +180,7 @@
               </div>
               <button class="btn btn-primary">Learn More</button>
             </div>
+          </div>
             <div class="image">
               <img src="images/projects/Malware Open.png"></img>
             </div>
@@ -184,9 +188,11 @@
         </div>
         <div class="carousel-cell">
           <div class="cell-container">
+            <div class="description-container">
+
             <div class="description">
-              <h1>Travel Agency Website</h1>
-              <h2>Spring 2018</h2>
+              <h2>Travel Agency Website</h2>
+              <h3>Spring 2018</h3>
               <p>As part of my Introduction to Databases course final project, I worked in a group to create a travel website in which users could search and book flights, cruises, hotels, or car rentals based on different criteria.</p>
               <div class="tools">
                 <span><i class="fas fa-circle red"></i> Full-stack</span>
@@ -196,6 +202,7 @@
               </div>
               <button class="btn btn-primary">Learn More</button>
             </div>
+          </div>
             <div class="image">
               <img src="images/projects/travelGO2.png"></img>
             </div>
@@ -203,9 +210,11 @@
         </div>
         <div class="carousel-cell">
           <div class="cell-container">
+            <div class="description-container">
+
             <div class="description">
-              <h1>Dynamic Memory Allocator</h1>
-              <h2>Spring 2018</h2>
+              <h2>Dynamic Memory Allocator</h2>
+              <h3>Spring 2018</h3>
               <p>Using the C programming language as part of my System Fundamentals II course, I created a dynamic memory allocator to allocate, reallocate, or free virtual memory. Modeled after segregated free lists and immediate coalescing.</p>
               <div class="tools">
                 <span><i class="fas fa-circle red"></i> Back-end</span>
@@ -214,6 +223,7 @@
               </div>
               <button class="btn btn-primary">Learn More</button>
             </div>
+          </div>
             <div class="image">
               <img src="images/projects/buddysys.png"></img>
             </div>
@@ -221,10 +231,12 @@
         </div>
         <div class="carousel-cell">
           <div class="cell-container">
+            <div class="description-container">
+
             <div class="description">
-              <h1>Ironlogs: Consolidated Results</h1>
-              <h2>Summer 2017</h2>
-              <p>As an intern at Syncsort, I implemented a tool within Ironlogs, the in house test results site, for developers to compare and analyze test results of 2 product builds. I retrieved test results from a database based on search criteria as well as analyzed the results to find things such as new failures.</p>
+              <h2>Ironlogs: Consolidated Results</h2>
+              <h3>Summer 2017</h3>
+              <p>As an intern at <a id="syncsort" href="" target="__blank">Syncsort</a>, I implemented a tool within Ironlogs, the in house test results site, for developers to compare and analyze test results of 2 product builds. I retrieved test results from a database based on search criteria as well as analyzed the results to find things such as new failures.</p>
               <div class="tools">
                 <span><i class="fas fa-circle red"></i> Full-stack</span>
                 <span><i class="fas fa-circle blue"></i> HTML/Bootstrap</span>
@@ -233,6 +245,7 @@
               </div>
               <button class="btn btn-primary">Learn More</button>
             </div>
+          </div>
             <div class="image">
               <img src="images/projects/Ironlogs.png"></img>
             </div>
@@ -240,9 +253,11 @@
         </div>
         <div class="carousel-cell">
           <div class="cell-container">
+            <div class="description-container">
+
             <div class="description">
-              <h1>jClassDesigner</h1>
-              <h2>Spring 2016</h2>
+              <h2>jClassDesigner</h2>
+              <h3>Spring 2016</h3>
               <p>My final project for my CSE 219: Computer Science III class using Java/JavaFX. This is a desktop app that helps users create UML Diagrams and exports them to skeleton code. Both the front-end and the back-end was done using a combination of Java, JavaFX, and JSON.</p>
               <div class="tools">
                 <span><i class="fas fa-circle red"></i> Desktop App</span>
@@ -252,6 +267,7 @@
               </div>
               <button class="btn btn-primary">Learn More</button>
             </div>
+          </div>
             <div class="image">
               <img src="images/projects/jclassdesigner.png"></img>
             </div>
@@ -260,6 +276,7 @@
 
       </div>
     </div>
+      </div>
 </div> <!-- end projects -->
 
   <div id="footer">
@@ -269,7 +286,7 @@
         <!--Section heading-->
         <!--Section description-->
         <h1 style="text-align:center;">Get in touch</h1>
-        <h2 class="text-center w-responsive mx-auto mb-5">Thanks for making it to the end!</h2>
+        <h3 class="text-center w-responsive mx-auto mb-5">Thanks for making it to the end!</h3>
         <div class="row">
             <!--Grid column-->
             <div class="col-md-9 mb-md-0 mb-5">
@@ -387,12 +404,12 @@
 <script>
   document.addEventListener('DOMContentLoaded',function(event){
   // array with texts to type in typewriter
-  var dataText = ["echo hello, world."]
+  var dataText = ["echo Hello, World.", "echo I am a full-stack developer.", "echo scroll or click the arrow to learn more :)"]
 
   // type one text in the typwriter
   // keeps calling itself until the text is finished
   function typeWriter(text, i, fnCallback) {
-    // chekc if text isn't finished yet
+    // check if text isn't finished yet
     if (i < (text.length)) {
       // add next character to h1
      document.querySelector("#helloworld").innerHTML = text.substring(0, i+1);
@@ -408,6 +425,18 @@
       setTimeout(fnCallback, 700);
     }
   }
+
+  function typeDelete(text, i) {
+    if (i > 0) {
+      // delete next character
+      document.querySelector("#helloworld").innerHTML = text.substring(0, i-1);
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeDelete(text, i - 1);
+      }, 60);
+    }
+
+  }
   // start a typewriter animation for a text in the dataText array
    function StartTextAnimation(i) {
      if (typeof dataText[i] == 'undefined'){
@@ -421,6 +450,7 @@
     setTimeout(function() {
      typeWriter(dataText[i], 0, function(){
        // after callback (and whole text has been animated), start next text
+       typeDelete(dataText[i], dataText[i].length);
        StartTextAnimation(i + 1);
      });
    }, 2500);
