@@ -215,6 +215,12 @@ a:hover {
 .skills li {
   display: inline-block;
 }
+.skills li:after {
+  content: ", ";
+}
+.skills li:last-child:after {
+    content: "";
+}
 .purple {
   color: var(--purple);
 }
