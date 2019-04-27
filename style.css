@@ -90,6 +90,7 @@ nav li {
     font-weight: bolder;
     padding: 10px;
     min-width: 120px;
+    text-align: center;
 }
 nav a {
   color: white;
