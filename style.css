@@ -1,6 +1,6 @@
 :root {
   --gradient-purple: rgba(107, 107, 131, 0.8);
-  --gradient-teal: rgba(59, 141, 153, 0.9) ;
+  --gradient-teal: rgba(72, 135, 153, 0.9) ;
   --gradient-silver-o: rgba(230, 233, 242, 0.7);
   --gradient-silver: rgba(230, 233, 242, 0.2);
   --teal: rgb(59, 141, 153);
@@ -18,7 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   margin: 0;
   color: black;
   background: linear-gradient(to bottom, var(--gradient-purple) 20%, var(--gradient-silver-o) 40%, var(--gradient-teal) 70%, var(--gradient-silver) 100%), url("images/connection.jpg") center fixed;
@@ -28,17 +28,21 @@ body {
 a:link, a:visited {
   text-decoration: none !important;
 }
-
+h1, h2, h3 {
+  font-family: 'Roboto Mono', 'sans-serif';
+}
 h1 {
   font-size: 1.8em;
-  line-height: 2em;
+  line-height: 1.8em;
 }
 h2 {
   font-size: 1.5em;
   line-height: 1.5em;
+  letter-spacing: -1px;
 }
 h3 {
   font-size: 1.2em;
+  letter-spacing: -1px;
 }
 .bold {
   font-weight: bolder;

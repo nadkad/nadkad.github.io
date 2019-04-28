@@ -31,10 +31,9 @@
 
 .carousel-cell {
   width: 100%;
-  min-height: 400px;
+  min-height: 320px;
   color: black;
   counter-increment: carousel-cell;
-  padding: 0px;
 }
 
 .cell-container {
