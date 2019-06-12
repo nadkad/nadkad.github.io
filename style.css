@@ -1,7 +1,7 @@
 :root {
-  --gradient-purple: rgba(107, 107, 131, 0.8);
+  --gradient-purple: rgba(107, 107, 131, 0.9);
   --gradient-teal: rgba(72, 135, 153, 0.9) ;
-  --gradient-silver-o: rgba(230, 233, 242, 0.7);
+  --gradient-silver-o: rgba(215, 217, 218, 0.9);
   --gradient-silver: rgba(230, 233, 242, 0.2);
   --teal: rgb(59, 141, 153);
   --purple-o: rgb(92, 87, 150);
@@ -26,7 +26,14 @@ body {
 }
 
 a:link, a:visited {
-  text-decoration: none !important;
+  text-decoration: none;
+}
+a.link {
+  text-decoration: underline;
+}
+a.link:hover {
+  color: var(--gradient-silver-o);
+  transition-duration: 0.2s;
 }
 h1, h2, h3 {
   font-family: 'Roboto Mono', 'sans-serif';
@@ -83,7 +90,6 @@ nav ul {
   display: block;
   float: left;
   width: 100%;
-
 }
 nav #logo {
   font-size: 3em;
@@ -110,8 +116,9 @@ nav a {
   left: 5%;
   display: flex;
 }
-.nav-left li {
-  padding-right: 2px;
+.nav-left li:not(:first-child) { /* All social links except site Logo */
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .nav-right {
   position: absolute;
@@ -150,7 +157,7 @@ a:hover {
 }
 .content {
   position: absolute;
-  width: 65%;
+  width: 70%;
   max-height: 90%;
   top: 50%;
   left: 25%;
@@ -218,18 +225,18 @@ a:hover {
 .skillsbox {
   display: inline-block;
   vertical-align: top;
-  width: auto;
-  height: 450px;
+  width: 270px;
+  height: 350px;
   padding: 5px;
   padding-top: 20px;
   font-weight: bolder;
   border-radius: 5px;
 }
 .skills li {
-  display: inline-block;
+
 }
 .skills li:after {
-  content: ", ";
+  content: "";
 }
 .skills li:last-child:after {
     content: "";
@@ -329,6 +336,7 @@ a:hover p {
 }
 
 /* SBU styling */
+
 #sbu {
   background: linear-gradient(to right, var(--sbu-red), var(--sbu-red-o));
   background-size: 300% 40%;
