@@ -142,7 +142,7 @@ a:hover {
   color: inherit;
 }
 
-#intro, #about, #skills, #projects, #footer {
+#home, #about, #skills, #projects, #footer {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -157,7 +157,7 @@ a:hover {
 }
 .content {
   position: absolute;
-  width: 70%;
+  width: 65%;
   max-height: 90%;
   top: 50%;
   left: 25%;
@@ -189,10 +189,10 @@ a:hover {
   width: 90%;
   margin: 0 auto;
 }
-#intro {
+#home {
   background-size: cover;
 }
-.intro-main {
+.home-main {
   position: absolute;
   top: 50%;
   left: 50%;
