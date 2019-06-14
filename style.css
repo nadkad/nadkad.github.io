@@ -4,10 +4,10 @@
   --gradient-silver-o: rgba(215, 217, 218, 0.9);
   --gradient-silver: rgba(230, 233, 242, 0.2);
   --teal: rgb(59, 141, 153);
-  --purple-o: rgb(92, 87, 150);
-  --purple: rgba(92, 87, 150, 0.4);
-  --sbu-red-o: rgb(153, 0, 0);
-  --sbu-red: rgba(153, 0, 0, 0.4);
+  --purple-hover: rgb(79, 74, 130);
+  --purple: rgba(92, 87, 150);
+  --sbu-red-hover: rgb(128, 0, 0);
+  --sbu-red: rgba(153, 0, 0);
   --error: rgb(255, 77, 77);
   --syncsort: rgba(75, 139, 255, 0.4);
   --syncsort-o: rgb(75, 139, 255);
@@ -149,6 +149,10 @@ a:hover {
   overflow: hidden;
   text-align: left;
 }
+#skills .content {
+  width: 95%;
+  left: 33%;
+}
 #my-image {
   float: right;
 }
@@ -231,11 +235,29 @@ a:hover {
 .skillsbox {
   display: inline-block;
   vertical-align: top;
-  width: 270px;
+  min-width: 300px;
+  width: auto;
   height: 350px;
   padding: 5px;
   padding-top: 20px;
   border-radius: 5px;
+}
+
+.skillsbox:hover {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0); /* fixes shaking issue on hover in chrome */
+  text-shadow: 1px 1px 3px white;
+  transition-duration: 0.3s;
+}
+.skillsbox:hover .fas.fa-paint-brush, .skillsbox:hover .fas.fa-clipboard-check {
+  color: var(--gradient-teal);
+  transition-property: color;
+  transition-duration: 0.3s;
+}
+.skillsbox:hover .fas.fa-code {
+  color: var(--gradient-purple);
+  transition-property: color;
+  transition-duration: 0.3s;
 }
 .skills li {
 
@@ -343,16 +365,18 @@ a:hover p {
 /* SBU styling */
 
 #sbu {
-  background: linear-gradient(to right, var(--sbu-red), var(--sbu-red-o));
-  background-size: 300% 40%;
-  background-repeat: no-repeat;
-  background-position: 0% 100%;
-  transition-property: background-position;
-  transition-duration: 300ms;
-  padding: 0;
+  color: var(--sbu-red);
 }
 #sbu:hover {
-  background-position: 50% 100%;
+  color: var(--sbu-red-hover);
+}
+
+
+#resume {
+  color: var(--purple);
+}
+#resume:hover {
+  color: var(--purple-hover);
 }
 
 #comodo {
