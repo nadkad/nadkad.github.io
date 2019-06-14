@@ -240,12 +240,10 @@ a:hover {
   height: 350px;
   padding: 5px;
   padding-top: 20px;
-  border-radius: 5px;
+  text-shadow: 1px 1px 3px transparent;
 }
 
 .skillsbox:hover {
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1.0, 1.0); /* fixes shaking issue on hover in chrome */
   text-shadow: 1px 1px 3px white;
   transition-duration: 0.3s;
 }
