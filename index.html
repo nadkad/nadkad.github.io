@@ -55,7 +55,8 @@
       <div class="me">
       </div> <!-- end me -->
       <div class="type-writer">
-        <h1 id="headline">~ Nadya_Kadayifci$&nbsp;<span id="helloworld"></h1>
+        <h1 id="headline">~ Nadya_Kadayifci$
+          <span id="helloworld"></span></h1>
       </div> <!-- end type-writer -->
       <ul class="external-links"></ul>
     </div> <!-- end intro-main -->
@@ -72,12 +73,12 @@
       </div> <!-- end header-container -->
       <div class="content">
         <h1>About</h1>
-        <h2>I am a full-stack developer.</h2>
+        <h2>I am a software engineer and full-stack developer.</h2>
         <div id="my-image">
           <img></img>
         </div>
         <p>I studied <a id="sbu" class="link" target="_blank" href="https://www.cs.stonybrook.edu/about-us"/>Computer Science at Stony Brook University</a> with a specialization in Human-Computer Interaction.</p>
-        <p>With a strong background in computer science fundamentals and a passion for front-end, I enjoy working on all layers of code and value knowing how they all work in tandem. I hope to combine my skills to solve complex problems, apply creativity, and bridge the gap between the end user and the provider. <p>
+        <p>I am passionate about Software Engineering in order to be able to solve unique and abstract problems and to bring my technical, creative, and interpersonal skill set to writing good software. I enjoy that coding is abstract and that it can solve a variety of problems or provide a variety of services virtually rather than physically. Each layer of an application can be built with care with the bigger picture in mind, bridging the gap between both the end users and the providers. Each layer (back-end, front-end, database) also provides a unique set of challenges that I collectively enjoy being able to tackle.<p>
         <p>I also hope to continue a lifetime of learning within the field. Some things I'm interested in are data science and visualization, machine learning, programming languages, and UI/UX.</p>
         <p>Scroll down to learn more and see my projects or view <a id="resume" class="link" target="_blank" href="NadyaKadayifciResume_Portfolio.pdf">my resume</a> for a more condensed version.</p>
       </div> <!-- end content -->
@@ -407,22 +408,34 @@
 
 
 <script>
+  $('nav ul li a').on('click', function () {
+    $(this).closest('nav ul').find('a.active').removeClass('active');
+    $(this).addClass('active');
+});
   document.addEventListener('DOMContentLoaded',function(event){
   // array with texts to type in typewriter
-  var dataText = ["echo Hello, World.", "echo I am a full-stack developer.", "echo scroll or click the arrow to learn more :)"]
+  var dataText = ["echo Hello, World."];
 
   // type one text in the typwriter
   // keeps calling itself until the text is finished
-  function typeWriter(text, i, fnCallback) {
+  function typeWriter(text, dataTextIndex, i, fnCallback) {
+
     // check if text isn't finished yet
     if (i < (text.length)) {
       // add next character to h1
-     document.querySelector("#helloworld").innerHTML = text.substring(0, i+1);
+      if (dataTextIndex > 0 && dataTextIndex != 2) {
+        document.querySelector("#helloworld").innerHTML = "echo " + text.substring(0, i+1);
+      }
+      else if (dataTextIndex == 2) {
+        document.querySelector("#helloworld").innerHTML = "echo I am a " + text.substring(0, i+1);
+      } else {
+        document.querySelector("#helloworld").innerHTML = text.substring(0, i+1);
+    }
 
       // wait for a while and call this function again for next character
       setTimeout(function() {
-        typeWriter(text, i + 1, fnCallback)
-      }, 140);
+        typeWriter(text, dataTextIndex, i + 1, fnCallback)
+      }, 100);
     }
     // text finished, call callback if there is a callback function
     else if (typeof fnCallback == 'function') {
@@ -431,13 +444,28 @@
     }
   }
 
-  function typeDelete(text, i) {
-    if (i > 0) {
+  function typeDelete(text, dataTextIndex, i) {
+    var minCharacter = 4;
+    var constantString = "";
+    if (dataTextIndex == 1) {
+      minCharacter = 7;
+      constantString = "echo ";
+    }
+    if (dataTextIndex == 2) {
+      constantString = "echo ";
+      text = "I am a " + text;
+      minCharacter = 0;
+    }
+    if (dataTextIndex == 3) {
+      constantString = "";
+      minCharacter = 0;
+    }
+    if (i > minCharacter) {
       // delete next character
-      document.querySelector("#helloworld").innerHTML = text.substring(0, i-1);
+      document.querySelector("#helloworld").innerHTML = constantString + text.substring(0, i-1);
       // wait for a while and call this function again for next character
       setTimeout(function() {
-        typeDelete(text, i - 1);
+        typeDelete(text, dataTextIndex, i - 1);
       }, 60);
     }
 
@@ -453,9 +481,11 @@
     if (i < dataText.length) {
       // text exists! start typewriter animation
     setTimeout(function() {
-     typeWriter(dataText[i], 0, function(){
+     typeWriter(dataText[i], i, 0, function(){
        // after callback (and whole text has been animated), start next text
-       typeDelete(dataText[i], dataText[i].length);
+       if (dataText.length > 1) {
+         typeDelete(dataText[i], i, dataText[i].length);
+      }
        StartTextAnimation(i + 1);
      });
    }, 2500);

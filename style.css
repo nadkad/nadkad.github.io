@@ -3,7 +3,7 @@
   --gradient-teal: rgba(72, 135, 153, 0.9) ;
   --gradient-silver-o: rgba(215, 217, 218, 0.9);
   --gradient-silver: rgba(230, 233, 242, 0.2);
-  --teal: rgb(59, 141, 153);
+  --teal: rgb(82, 199, 185);
   --purple-hover: rgb(50, 87, 150);
   --purple: rgba(79, 87, 150);
   --sbu-red-hover: rgb(80, 0, 0);
@@ -21,8 +21,6 @@ body {
   font-family: 'Noto Sans', sans-serif;
   margin: 0;
   color: black;
-  background: linear-gradient(to bottom, var(--gradient-purple) 20%, var(--gradient-silver-o) 40%, var(--gradient-teal) 70%, var(--gradient-silver) 100%), url("images/connection.jpg") center fixed;
-  background-size: cover;
 }
 
 a:link, a:visited {
@@ -36,7 +34,6 @@ a.link:hover {
   transition-duration: 0.2s;
 }
 h1, h2, h3 {
-  font-family: 'Roboto Mono', 'sans-serif';
 }
 h1 {
   font-size: 1.8em;
@@ -112,8 +109,15 @@ nav a {
 nav a:hover {
   text-shadow: none;
   color: white;
+  opacity: 1.0;
   transition-duration: 0.3s;
 }
+.active {
+  text-shadow: none;
+  color: var(--teal);
+  opacity: 1.0;
+}
+
 a {
   color: inherit;
 }
@@ -148,6 +152,7 @@ a:hover {
   overflow: hidden;
   text-align: left;
 }
+
 #skills .content {
   width: 95%;
   left: 33%;
@@ -187,11 +192,10 @@ a:hover {
 }
 #headline {
   font-family: 'Roboto Mono', sans-serif !important;
-  text-shadow: 1px 1px black;
   text-align: left;
   font-weight: bold;
-  line-height: 1.6em;
-  font-size: 2em;
+  line-height: 1.8em;
+  font-size: 1.8em;
   color: white;
   opacity: 0.8;
   padding: 5px;
@@ -199,6 +203,11 @@ a:hover {
   margin: 0 auto;
 }
 #home {
+  background: #E6DADA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background: linear-gradient(to left, rgba(215, 221, 232, 0.8) 0%, rgba(117, 127, 154, 0.9) 40%), url("images/connection.jpg") center fixed;
   background-size: cover;
 }
 .home-main {
@@ -247,12 +256,12 @@ a:hover {
   transition-duration: 0.3s;
 }
 .skillsbox:hover .fas.fa-paint-brush, .skillsbox:hover .fas.fa-clipboard-check {
-  color: var(--gradient-teal);
+  color: var(--teal);
   transition-property: color;
   transition-duration: 0.3s;
 }
 .skillsbox:hover .fas.fa-code {
-  color: var(--gradient-purple);
+  color: rgb(135, 152, 195);
   transition-property: color;
   transition-duration: 0.3s;
 }
@@ -281,6 +290,8 @@ a:hover {
   max-height: auto;
   justify-content: center;
   overflow: visible;
+  background: linear-gradient(to left, rgba(215, 221, 232, 0.3), rgba(117, 127, 154, 0.9)), url("images/connection.jpg") center fixed;
+  background-size: cover;
 }
 #contact {
   position: absolute;
