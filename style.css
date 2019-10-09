@@ -3,7 +3,7 @@
   --gradient-teal: rgba(72, 135, 153, 0.9) ;
   --gradient-silver-o: rgba(215, 217, 218, 0.9);
   --gradient-silver: rgba(230, 233, 242, 0.2);
-  --teal: rgb(82, 199, 185);
+  --teal: rgb(82, 193, 204);
   --purple-hover: rgb(50, 87, 150);
   --purple: rgba(79, 87, 150);
   --sbu-red-hover: rgb(80, 0, 0);
@@ -206,7 +206,7 @@ a:hover {
   margin: 0 auto;
 }
 #home {
-  background: linear-gradient(to right, rgba(159, 172, 230, 0.9) 0%, rgba(116, 235, 213, 0.7) 100%), url("images/connection.jpg") center fixed;
+  background: linear-gradient(to right, rgba(139, 198, 236, 1.0) 0%, rgba(149, 153, 226, 0.5) 100%), url("images/connection.jpg") center fixed;
   background-size: cover;
 }
 .home-main {
@@ -289,7 +289,8 @@ a:hover {
   max-height: auto;
   justify-content: center;
   overflow: visible;
-  background: linear-gradient(to right, rgba(159, 172, 230, 0.8) 0%, rgba(116, 235, 213, 0.5) 100%), url("images/connection.jpg") center fixed;
+  background: linear-gradient(to right, rgba(139, 198, 236, 0.7) 0%, rgba(149, 153, 226, 0.5) 100%), url("images/connection.jpg") center fixed;
+  background-size: cover;
   background-size: cover;
 }
 #contact {
