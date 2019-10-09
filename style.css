@@ -105,26 +105,29 @@ nav a {
   transition-duration: 0.2s;
   text-align: center;
   vertical-align: middle;
+  -webkit-transition: all 0.3s linear;
+   -moz-transition: all 0.3s linear;
+   -o-transition: all 0.3s linear;
+   transition: all 0.3s linear;
 }
 nav a:hover {
-  text-shadow: none;
+  text-shadow: 1px 1px 3px white;
   color: white;
   opacity: 1.0;
   transition-duration: 0.3s;
 }
-.active {
-  text-shadow: none;
-  color: var(--teal);
-  opacity: 1.0;
-}
-
 a {
-  color: inherit;
+  color: white;
 }
 a:hover {
   color: inherit;
 }
 
+.active-link {
+  text-shadow: 1px 1px 3px white;
+  text-decoration-color: white;
+  opacity: 1.0;
+}
 
 .nav-left {
   position: relative;
@@ -203,11 +206,7 @@ a:hover {
   margin: 0 auto;
 }
 #home {
-  background: #E6DADA;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background: linear-gradient(to left, rgba(215, 221, 232, 0.8) 0%, rgba(117, 127, 154, 0.9) 40%), url("images/connection.jpg") center fixed;
+  background: linear-gradient(to right, rgba(159, 172, 230, 0.9) 0%, rgba(116, 235, 213, 0.7) 100%), url("images/connection.jpg") center fixed;
   background-size: cover;
 }
 .home-main {
@@ -290,7 +289,7 @@ background: linear-gradient(to right, #274046, #E6DADA); /* W3C, IE 10+/ Edge, F
   max-height: auto;
   justify-content: center;
   overflow: visible;
-  background: linear-gradient(to left, rgba(215, 221, 232, 0.3), rgba(117, 127, 154, 0.9)), url("images/connection.jpg") center fixed;
+  background: linear-gradient(to right, rgba(159, 172, 230, 0.8) 0%, rgba(116, 235, 213, 0.5) 100%), url("images/connection.jpg") center fixed;
   background-size: cover;
 }
 #contact {
